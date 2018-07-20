@@ -1,0 +1,11 @@
+<h1>Open soccer games for betting</h1>
+<div *ngFor="let game of games">
+  <div class="row">
+    <div class="col text-right">
+      <p>{{game.local}} vs {{game.visitor}}</p>
+    </div>
+    <div class="col">
+      <button class="btn btn-large btn-info" (click)="bet(game)" [disabled]="game.betPlaced">Bet</button>
+    </div>
+  </div>
+</div>
